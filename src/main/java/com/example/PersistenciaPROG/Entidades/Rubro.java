@@ -22,4 +22,8 @@ public class Rubro extends Base{
     @JoinColumn(name = "producto___id")
     @Builder.Default
     private List<Producto> productos = new ArrayList<>();
+
+    public void agregarProducto(Producto p){
+        productos.add(p);
+    }
 }

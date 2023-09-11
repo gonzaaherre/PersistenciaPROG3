@@ -24,7 +24,9 @@ public class Domicilio extends Base{
 
     private String localidad;
 
-
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.EAGER)
     @JoinColumn(name = "domicilio_id")
